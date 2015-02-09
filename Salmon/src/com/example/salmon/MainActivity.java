@@ -23,6 +23,33 @@ public class MainActivity extends ActionBarActivity {
 				MainActivity.this.startActivity(i);
 			}
 		});
+		
+		Button afterCall = (Button) findViewById(R.id.afterCall);
+		afterCall.setOnClickListener(new View.OnClickListener() {	
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, afterCall.class);
+				MainActivity.this.startActivity(i);
+			}
+		});
+		
+		Button endofday = (Button) findViewById(R.id.endButton);
+		endofday.setOnClickListener(new View.OnClickListener() {	
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, endOfDay.class);
+				MainActivity.this.startActivity(i);
+			}
+		});
+		
+		Button data = (Button) findViewById(R.id.data);
+		data.setOnClickListener(new View.OnClickListener() {	
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, data.class);
+				MainActivity.this.startActivity(i);
+			}
+		});
 	}
 
 	@Override
