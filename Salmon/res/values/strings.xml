@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="survey">Take Survey</string>
+	<string name="survey1">Survey 1</string>
+	<string name="app_name">salmon</string>
+	<string name="takeSurvey">Take Survey!</string>
+<!--	<string name="app_name">salmon</string>-->
+	<string name="question_1">1. Who were you talking to on the phone? Select the closest category, or enter your answer in the space provided for optional input.</string>
+	<string name="question_2">2. To what extent were your feelings positive/negative just before you recieved the call?</string>
+	<string name="question_3">3. To what extent did the phone call make you feel positive or negative?</string>
+	<string name="question_4">4. What was the puropse of the call?</string>
+	<string name="question_5">5. What activity were you doing just before the phone call? Select the option(s) that best match your activity, or enter your answers in the space provided for optional input.</string>
+	<string name="question_A">1. On average, to what extent were your feelings positive/negative today?</string>
+	<string name="question_B">2. On average, to what extent did you feel that you interacted effectively with others in social situations today?</string>
+	<string name="question_C">3. On average, to what extent did you enjoy/dislike your social interactions today?</string>
+		<string name="question_D">4. Rate the extent to which the following applies to your feelings/thoughts/behaviors today </string>
+	<string name="question_E">5. Rate the extent to which the following applies to your feelings/thoughts today</string>
+	<string name="question_F">6. How much time did you spend on each of the following modes of communication?</string>
+	<string name="question_G">7. To what extent did your face-to-face social interactions today make you feel that your personal space had been invaded?</string>
+	<string name="question_H">8. For the times when your feelings were negative today, what did you do to cope with these feelings? Rate the extent to which you used these strategies.</string>
+	<string name="question_I">9.For the times when you were feeling particularly positive/negative today, how often did you let other people know about these feelings?</string>
+	<string name="question_J">10. Please think about how much of a hassle and how much of an uplift (i.e., positive impact) each of the following items was for you today.</string>
+	<string-array name="speaking_list">
+		<item>Choose Below</item>
+		<item>Immediate Family</item>
+		<item>Extended Family</item>
+		<item>Collegue/Work Connection</item>
+		<item>Romantic Partner/Date</item>
+		<item>Close Friend</item>
+		<item>Aquaintance</item>
+		<item>Classmate</item>
+		<item>Roommate</item>
+		<item>Stranger</item>
+		<item>Other</item>
+	</string-array>
+	<string-array name="purpose_list">
+		<item>Choose Below</item>
+		<item>To make plans/organizational</item>
+		<item>Work-related</item>
+		<item>Transactional</item>
+		<item>As a distraction</item>
+		<item>To seek social support</item>
+		<item>Maintain social contact</item>
+		<item>Other</item>
+	</string-array>
+	<string-array name="activity_options">
+		<item>Choose Below</item>
+		<item>Hanging out at home</item>
+		<item>Attending class</item>
+		<item>Preparing for an upcoming activity</item>
+		<item>Coordinating non-work activities</item>
+		<item>Exercising</item>
+		<item>Working</item>
+		<item>Work meeting</item>
+		<item>Social gathering</item>
+		<item>Eating</item>
+		<item>Personal entertainment</item>
+		<item>Household chores</item>
+		<item>Errands</item>
+		<item>Studying</item>
+		<item>Other</item>
+	</string-array>
+	<string-array name="companion_options">
+		<item>Choose Below</item>
+		<item>alone</item>
+		<item>Immediate family</item>
+		<item>Extended family</item>
+		<item>Colleague/work connection</item>
+		<item>Romantig partner/date</item>
+		<item>Close friend</item>
+		<item>Acquaintance</item>
+		<item>Classmate</item>
+		<item>Roommate</item>
+		<item>Stranger</item>
+		<item>Other</item>
+	</string-array>
+
+	<string name="Q2_ActivityPrompt">Choose an activity</string>
+   	
+
+   	<string-array name="Q2_Activities">
+        <item>Hanging out at home</item>
+        <item>Attending class</item>
+        <item>Preparing for an upcoming activity</item>
+        <item>Coordinating non-work activities </item>
+        <item>Exercising</item>
+        <item>Working</item>
+        <item>Work meeting</item>
+        <item>Social gathering</item>
+        <item>Eating</item>
+        <item>Personal entertainment</item>
+        <item>Household chores</item>
+        <item>Errands</item>
+        <item>Studying</item>
+        <item>Commuting</item>
+        <item>Other</item>
+    </string-array>
+	
+	<string name="Q2_CompanionPrompt">Choose a companion</string>
+	<string-array name="Q2_Companions">
+        <item>alone</item>
+        <item>immediate family</item>
+        <item>extended family</item>
+        <item>colleague/work connection</item>
+        <item>romantic partner/date</item>
+        <item>close friend</item>
+        <item>acquaintance</item>
+        <item>classmate</item>
+        <item>roommate</item>
+        <item>stranger</item>
+        <item>other</item>
+    </string-array>
+
+    <string name="Q3_Prompt">Choose a companion</string>
+	<string-array name="Q3_Choices">
+        <item>a lot more</item>
+        <item>slightly more</item>
+        <item>no change</item>
+        <item>slightly fewer</item>
+        <item>a lot fewer</item>
+    </string-array>
+
+   	<string name="Q5_Prompt">Choose one</string>
+	<string-array name="Q5_Choices">
+        <item>past</item>
+        <item>present</item>
+        <item>future</item>
+    </string-array>
+
+    <string-array name="precentages">
+<item>Choose Below</item>
+<item>0%</item>
+<item>1-10%</item>
+<item>11-30%</item>
+<item>31-50%</item>
+<item>51-75%</item>
+<item>>75%</item>
+</string-array>
+
+<string name="question_K">11. What percentage of your waking hours today did you engage in social interactions?</string>
+	<string name="question_L">12. During what percentage of your waking hours tomorrow do you expect to engage in social interactions?</string>
+
+</resources>
+
