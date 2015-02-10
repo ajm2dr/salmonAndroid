@@ -1,1456 +1,1778 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
+
     <ScrollView
-        android:minWidth="25px"
-        android:minHeight="25px"
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView1">
-        <LinearLayout
-            android:orientation="vertical"
+        android:minHeight="25px"
+        android:minWidth="25px">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:minWidth="25px"
+            android:layout_height="match_parent"
             android:minHeight="25px"
-            android:layout_height="match_parent">
+            android:minWidth="25px"
+            android:orientation="vertical">
+
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_A"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_A" />
+                android:id="@+id/q1"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="neutral"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true" />
-                <TextView
-                    android:text="positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true" />
-                <TextView
-                    android:text="neutral"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:id="@+id/q1_sb1"
+                android:layout_below="@id/q1"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="neutral"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q1_sbr"
+                android:layout_below="@id/q1_sb1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q1_sbl"
+                android:layout_below="@id/q1_sb1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q1_sb2"
+                android:layout_below="@id/q1_sbl"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q1_sb2r"
+                android:layout_below="@id/q1_sb2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="neutral"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q1_sb2l"
+                android:layout_below="@id/q1_sb2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_B"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_B" />
+                android:id="@+id/q2"
+                android:layout_below="@id/q1_sb2l"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all effectively"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Very effectively"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:id="@+id/q2_sb1"
+                android:layout_below="@id/q2"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Not at all effectively"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q2_sb1r"
+                android:layout_below="@id/q2_sb1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Very effectively"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q2_sb1l"
+                android:layout_below="@id/q2_sb1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_C"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_C" />
+                android:id="@+id/q3"
+                android:layout_below="@id/q2_sb1l"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Extremely disliked it"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Extremely enjoyed it"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:id="@+id/q3_sb1"
+                android:layout_below="@id/q3"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Extremely disliked it"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q3_sb1r"
+                android:layout_below="@id/q3_sb1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Extremely enjoyed it"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q3_sb1l"
+                android:layout_below="@id/q3_sb1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_D"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_D" />
+                android:id="@+id/q4"
+                android:layout_below="@id/q3_sb1l"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I felt relaxed"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="anxious in unfamiliar situations"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Entered social situations"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Avoided social situations"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I felt at ease talkign to strangers"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Uncomfortable when talking to strangers"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Avoided new people"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Took chance to meet new people"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Worried about peoples opinions"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Comfortable with peoples opinions"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Anxious about being foolish in front of people"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-                <TextView
-                    android:text="Relaxed"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:id="@+id/q4_sb1"
+                android:layout_below="@id/q4"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="I felt relaxed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb1r"
+                android:layout_below="@id/q4_sb1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="anxious in unfamiliar situations"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb1l"
+                android:layout_below="@id/q4_sb1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4_sb2"
+                android:layout_below="@id/q4_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Entered social situations"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb2r"
+                android:layout_below="@id/q4_sb2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Avoided social situations"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb2l"
+                android:layout_below="@id/q4_sb2"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4_sb3"
+                android:layout_below="@id/q4_sb2l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="I felt at ease talkign to strangers"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb3r"
+                android:layout_below="@id/q4_sb3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Uncomfortable when talking to strangers"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb3l"
+                android:layout_below="@id/q4_sb3"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4_sb4"
+                android:layout_below="@id/q4_sb3l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Avoided new people"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb4r"
+                android:layout_below="@id/q4_sb4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Took chance to meet new people"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb4l"
+                android:layout_below="@id/q4_sb4"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4_sb5"
+                android:layout_below="@id/q4_sb4l" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Worried about peoples opinions"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb5r"
+                android:layout_below="@id/q4_sb5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Comfortable with peoples opinions"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb5l"
+                android:layout_below="@id/q4_sb5"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4_sb6"
+                android:layout_below="@id/q4_sb5l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="Anxious about being foolish in front of people"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb6r"
+                android:layout_below="@id/q4_sb6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Relaxed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q4_sb6l"
+                android:layout_below="@id/q4_sb6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_E"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_E" />
+                android:id="@+id/q5"
+                android:layout_below="@id/q4_sb6l"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I was dwelling on mistakes I made in my social interactions"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="0.0dp" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I kept thinking about negative social interactions"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I was worrying about how my social interactions would turn out"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="I kept thinking about bad things that could happen during social interactions"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:id="@+id/q5_sb1"
+                android:layout_below="@id/q5"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.0dp"
+                android:text="I was dwelling on mistakes I made in my social interactions"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q5_sb1"
+                android:id="@+id/q5_sb1r" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q5_sb1r"
+                android:id="@+id/q5_sb2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="I kept thinking about negative social interactions"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q5_sb2"
+                android:id="@+id/q5_sb2r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q5_sb2r"
+                android:id="@+id/q5_sb3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="I was worrying about how my social interactions would turn out"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q5_sb3"
+                android:id="@+id/q5_sb3r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q5_sb3r"
+                android:id="@+id/q5_sb4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="I kept thinking about bad things that could happen during social interactions"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q5_sb4"
+                android:id="@+id/q5_sb4r"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_F"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_F" />
+                android:layout_below="@id/q5_sb4r"
+                android:id="@+id/q6"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Texts"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6"
+                android:id="@+id/q6_1"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_1"
+                android:id="@+id/q6_sb1"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb1"
+                android:id="@+id/q6_sb1l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="&gt;2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb1"
+                android:id="@+id/q6_sb1r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb1r"
+                android:id="@+id/q6_sb2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb2"
+                android:id="@+id/q6_sb2l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb2"
+                android:id="@+id/q6_sb2r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb2r"
+                android:id="@+id/q6_sb3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb3"
+                android:id="@+id/q6_sb3l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/q6_sb3r"
+                android:layout_below="@+id/q6_sb3"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Email"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6_sb3r"
+                android:id="@+id/q6_p"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_p"
+                android:id="@+id/q6_sb4"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb3"
+                android:id="@+id/q6_sb4l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb3"
+                android:id="@+id/q6_sb4r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb4r"
+                android:id="@+id/q6_sb5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb5"
+                android:id="@+id/q6_sb5l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb5"
+                android:id="@+id/q6_sb5r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb5r"
+                android:id="@+id/q6_sb6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb6"
+                android:id="@+id/q6_sb6l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb6"
+                android:id="@+id/q6_sb6r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Voice Call"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6_sb6r"
+                android:id="@+id/q6_vc"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_vc"
+                android:id="@+id/q6_sb7"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb7"
+                android:id="@+id/q6_sb7l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="&gt;2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb7"
+                android:id="@+id/q6_sb7r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb7r"
+                android:id="@+id/q6_sb8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb8"
+                android:id="@+id/q6_sb8l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb8"
+                android:id="@+id/q6_sb8r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb8r"
+                android:id="@+id/q6_sb9"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb9"
+                android:id="@+id/q6_sb9l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb9"
+                android:id="@+id/q6_sb9r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Instant Messaging"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6_sb9r"
+                android:id="@+id/q6_tm"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_tm"
+                android:id="@+id/q6_sb10"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb10"
+                android:id="@+id/q6_sb10l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb10"
+                android:id="@+id/q6_sb10r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb10r"
+                android:id="@+id/q6_sb11"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb11"
+                android:id="@+id/q6_sb11l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb11"
+                android:id="@+id/q6_sb11r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb11r"
+                android:id="@+id/q6_sb12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb12"
+                android:id="@+id/q6_sb12l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb12"
+                android:id="@+id/q6_sb12r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Face to face interaction"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6_sb12r"
+                android:id="@+id/q6_ff"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_ff"
+                android:id="@+id/q6_sb13"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb13"
+                android:id="@+id/q6_sb13l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb13"
+                android:id="@+id/q6_sb13r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb13r"
+                android:id="@+id/q6_sb14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb14"
+                android:id="@+id/q6_sb14l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb14"
+                android:id="@+id/q6_sb14r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb14r"
+                android:id="@+id/q6_sb15"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb15"
+                android:id="@+id/q6_sb15l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb15"
+                android:id="@+id/q6_sb15r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Social media"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q6_sb15r"
+                android:id="@+id/q6_sm"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sm"
+                android:id="@+id/q6_sb16"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="1 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;2 hours"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very positive"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very negative"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="0 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb16"
+                android:id="@+id/q6_sb16l"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2 hours"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb16"
+                android:id="@+id/q6_sb16r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb16r"
+                android:id="@+id/q6_sb17"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb17"
+                android:id="@+id/q6_sb17l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very positive"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb17"
+                android:id="@+id/q6_sb17r"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q6_sb17r"
+                android:id="@+id/q6_sb18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb18"
+                android:id="@+id/q6_sb18l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very negative"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q6_sb18"
+                android:id="@+id/q6_sb18r"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_G"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/question_G" />
+                android:layout_below="@id/q6_sb18r"
+                android:id="@+id/q7"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very invaded"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q7"
+                android:id="@+id/q7_sb1"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q7_sb1"
+                android:id="@+id/q7_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very invaded"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q7_sb1"
+                android:id="@+id/q7_sb1r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_H" />
+                android:text="@string/question_H"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q7_sb1r"
+                android:id="@+id/q8"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Tried to come up with a plan to solve the problem"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8"
+                android:id="@+id/q8_p1"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p1"
+                android:id="@+id/q8_sb1"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb1"
+                android:id="@+id/q8_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb1"
+                android:id="@+id/q8_sb1r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Waited to see if the situation fixed itself"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb1r"
+                android:id="@+id/q8_p2"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p2"
+                android:id="@+id/q8_sb2"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb2"
+                android:id="@+id/q8_sb2l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb2"
+                android:id="@+id/q8_sb2r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Sought advice from others "
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb2r"
+                android:id="@+id/q8_p3"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p3"
+                android:id="@+id/q8_sb3"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb3"
+                android:id="@+id/q8_sb3l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb3"
+                android:id="@+id/q8_sb3r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Sought comfort/assurance from others"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb3r"
+                android:id="@+id/q8_p4"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p4"
+                android:id="@+id/q8_sb4"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb4"
+                android:id="@+id/q8_sb4l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb4"
+                android:id="@+id/q8_sb4r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Identified something good in what had happened"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb4r"
+                android:id="@+id/q8_p5"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p5"
+                android:id="@+id/q8_sb5"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb5"
+                android:id="@+id/q8_sb5l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb5"
+                android:id="@+id/q8_sb5r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Told myself to learn to live with the situation "
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb5r"
+                android:id="@+id/q8_p6"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p6"
+                android:id="@+id/q8_sb6"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb6"
+                android:id="@+id/q8_sb6l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb6"
+                android:id="@+id/q8_sb6r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Got upset and vented my emotions"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb6r"
+                android:id="@+id/q8_p7"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p7"
+                android:id="@+id/q8_sb7"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb7"
+                android:id="@+id/q8_sb7l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb7"
+                android:id="@+id/q8_sb7r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Pretended that the situation did not happen "
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb7r"
+                android:id="@+id/q8_p8"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p8"
+                android:id="@+id/q8_sb8"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb8"
+                android:id="@+id/q8_sb8l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb8"
+                android:id="@+id/q8_sb8r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Tried to distract myself by thinking about or doing other things "
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_below="@id/q8_sb8r"
+                android:id="@+id/q8_p9"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q8_p9"
+                android:id="@+id/q8_sb9"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb9"
+                android:id="@+id/q8_sb9l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb9"
+                android:id="@+id/q8_sb9r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="Took alcohol/drugs to stop myself from thinking about it."
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q8_sb9r"
+                android:id="@+id/q8_p10"/>
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q8_p10"
+                android:id="@+id/q8_sb10"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb10"
+                android:id="@+id/q8_sb10l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q8_sb10"
+                android:id="@+id/q8_sb10r"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_I"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q8_sb10r"
+                android:id="@+id/q9"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Positive Feelings"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q9"
+                android:id="@+id/q9_p1"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q9_p1"
+                android:id="@+id/q9_sb1"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q9_sb1"
+                android:id="@+id/q9_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q9_sb1"
+                android:id="@+id/q9_sb1r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_H" />
-            <TextView
+                android:text="Negative Feelings"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Positive Feelings" />
+                android:layout_below="@id/q9_sb1r"
+                android:id="@+id/q9_p2"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q9_p2"
+                android:id="@+id/q9_sb2"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Negative Feelings" />
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="All the time"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q9_sb2"
+                android:id="@+id/q9_sb2l"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="All the time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q9_sb2"
+                android:id="@+id/q9_sb2r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="If never, to whom did you express these feelings?" />
+                android:text="If never, to whom did you express these feelings?"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q9_sb2r"
+                android:id="@+id/q9_p3"/>
+
             <Spinner
-                android:id="@+id/spinnerA"
-                android:layout_width="79.1dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="0.0dp" />
+                android:layout_below="@id/q9_p3"
+                android:id="@+id/q9_s1" />
+
             <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:text="If Other"
-                android:id="@+id/answerA"
-                android:layout_width="143.5dp"
-                android:layout_height="wrap_content" />
+                android:layout_below="@id/q9_s1"
+                android:id="@+id/q9_e1"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/question_J" />
-            <TextView
+                android:text="@string/question_J"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q9_e1"
+                android:id="@+id/q10"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Health/Wellbeing of a family member or significant other" />
+                android:text="Health/Wellbeing of a family member or significant other"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10"
+                android:id="@+id/q10_p1"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p1"
+                android:id="@+id/q10_sb1"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb1"
+                android:id="@+id/q10_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb1"
+                android:id="@+id/q10_sb1r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Family/Significant-other related obligations" />
+                android:text="Family/Significant-other related obligations"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb1r"
+                android:id="@+id/q10_p2"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p2"
+                android:id="@+id/q10_sb2"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb2"
+                android:id="@+id/q10_sb2l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb2"
+                android:id="@+id/q10_sb2r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Relationships with friends" />
+                android:text="Relationships with friends"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb2r"
+                android:id="@+id/q10_p3"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p3"
+                android:id="@+id/q10_sb3"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb3"
+                android:id="@+id/q10_sb3l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb3"
+                android:id="@+id/q10_sb3r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Social commitments" />
+                android:text="Social commitments"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb3r"
+                android:id="@+id/q10_p4"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p4"
+                android:id="@+id/q10_sb4"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb4"
+                android:id="@+id/q10_sb4l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb4"
+                android:id="@+id/q10_sb4r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your workload/Deadlines" />
+                android:text="Your workload/Deadlines"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb4r"
+                android:id="@+id/q10_p5"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p5"
+                android:id="@+id/q10_sb5"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb5"
+                android:id="@+id/q10_sb5l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb5"
+                android:id="@+id/q10_sb5r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Financial issues/Bills" />
+                android:text="Financial issues/Bills"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb5r"
+                android:id="@+id/q10_p6"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p6"
+                android:id="@+id/q10_sb6"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb6"
+                android:id="@+id/q10_sb6l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb6"
+                android:id="@+id/q10_sb6r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="your physical appearance" />
+                android:text="your physical appearance"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb6r"
+                android:id="@+id/q10_p7"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p7"
+                android:id="@+id/q10_sb7"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb7"
+                android:id="@+id/q10_sb7l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb7"
+                android:id="@+id/q10_sb7r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Your health" />
+                android:text="Your health"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb7r"
+                android:id="@+id/q10_p8"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p8"
+                android:id="@+id/q10_sb8"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb8"
+                android:id="@+id/q10_sb8l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb8"
+                android:id="@+id/q10_sb8r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Housework/Chores" />
+                android:text="Housework/Chores"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb8r"
+                android:id="@+id/q10_p9"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p9"
+                android:id="@+id/q10_sb9"/>
+
             <TextView
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb9"
+                android:id="@+id/q10_sb9l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb9"
+                android:id="@+id/q10_sb9r"/>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Legal Matters" />
+                android:text="Legal Matters"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q10_sb9r"
+                android:id="@+id/q10_p10"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Never"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="A great deal"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q10_p10"
+                android:id="@+id/q10_sb10"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Never"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb10"
+                android:id="@+id/q10_sb10l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="A great deal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q10_sb10"
+                android:id="@+id/q10_sb10r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="@string/question_K"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" />
+                android:layout_below="@id/q10_sb10r"
+                android:id="@+id/q11"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="0%"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="&gt;75%"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q11"
+                android:id="@+id/q11_sb1"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="0%"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q11_sb1"
+                android:id="@+id/q11_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="&gt;75%"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q11_sb1"
+                android:id="@+id/q11_sb1r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="@string/question_L"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q11_sb1r"
+                android:id="@+id/q12"/>
+
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q12"
+                android:id="@+id/q12_s1"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" />
-            <Spinner
-                android:id="@+id/spinnerB"
-                android:layout_width="79.1dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="0.0dp" />
-            <TextView
+                android:layout_alignParentLeft="true"
                 android:text="When thinking about your potential social interactions tomorrow...:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_below="@id/q12_s1"
+                android:id="@+id/q12_p1"/>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" />
-            <TextView
+                android:layout_alignParentLeft="true"
                 android:text="On average, to what extent do you expect you will interact effectively with others in these social situations? "
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" />
+                android:layout_below="@id/q12_p1"
+                android:id="@+id/q12_p2"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Not at all effectively"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Very Effectively"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
+                android:layout_below="@id/q12_p2"
+                android:id="@+id/q12_sb1"/>
+
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Not at all effectively"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q12_sb1"
+                android:id="@+id/q12_sb1l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Very Effectively"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q12_sb1"
+                android:id="@+id/q12_sb1r"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="On average, to what extent do you expect to enjoy/dislike these social interactions?"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true" />
+                android:layout_below="@id/q12_sb1r"
+                android:id="@+id/q12_p3"/>
+
             <SeekBar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:text="Extremely dislike them"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-                <TextView
-                    android:text="Extremely like them"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true" />
-            </LinearLayout>
-        </LinearLayout>
+                android:layout_below="@id/q12_p3"
+                android:id="@+id/q12_sb2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Extremely dislike them"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q12_sb2"
+                android:id="@+id/q12_sb2l"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Extremely like them"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@id/q12_sb2"
+                android:id="@+id/q12_sb2r"/>
+
+        </RelativeLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>
